@@ -46,13 +46,13 @@ public class Account {
 
         }
     }
-    public void debit(BigDecimal amount){
-        if(amount.compareTo(BigDecimal.ZERO) > 0 &&
-        balance.compareTo(amount) >= 0){
+
+    public void debit(BigDecimal amount) {
+        if (amount.compareTo(BigDecimal.ZERO) > 0 &&
+                balance.compareTo(amount) >= 0) {
             balance = balance.subtract(amount);
             System.out.println("Debit successfully completed");
-        }
-        else{
+        } else {
             System.out.println("Debit denied; the withdrawal amount must be less than the balance");
         }
     }
