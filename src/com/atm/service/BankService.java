@@ -1,7 +1,7 @@
 package com.atm.service;
 
 
-import com.atm.InvalidAccountNumberException;
+import com.atm.exception.InvalidAccountNumberException;
 import com.atm.exception.*;
 import com.atm.model.Account;
 
@@ -16,6 +16,7 @@ public class BankService {
 
     public BankService() {
         this.accounts = new HashMap<>();
+
     }
 
 
