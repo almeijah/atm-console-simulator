@@ -11,7 +11,12 @@ public class ConsoleInterface {
     BankService bank = new BankService();
 
     public void start() {
-        System.out.println("""
+
+
+        int choice = 0;
+
+        while (choice != 5) {
+            System.out.println("""
                 ----Welcome to ATM----
                 1-Create Account
                 2-Deposit
@@ -19,10 +24,6 @@ public class ConsoleInterface {
                 4-balance
                 5-Exit
                 """);
-
-        int choice = 0;
-
-        while (choice != 5) {
             choice = reader.nextInt();
             reader.nextLine();
             switch (choice) {
